@@ -1,0 +1,43 @@
+{
+  "name": "z1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --mode development",
+    "build": "webpack --mode production",
+    "lint": "eslint .",
+    "test": "jest",
+    "coverage": "jest --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SlavaFors/ajs-homeworks-oop-2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SlavaFors/ajs-homeworks-oop-2/issues"
+  },
+  "homepage": "https://github.com/SlavaFors/ajs-homeworks-oop-2#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.21.5",
+    "@babel/core": "^7.21.8",
+    "@babel/preset-env": "^7.21.5",
+    "babel-jest": "^29.5.0",
+    "babel-loader": "^9.1.2",
+    "css-loader": "^6.7.3",
+    "eslint": "^8.40.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "html-loader": "^4.2.0",
+    "html-webpack-plugin": "^5.5.1",
+    "jest": "^29.5.0",
+    "mini-css-extract-plugin": "^2.7.5",
+    "webpack": "^5.82.1",
+    "webpack-cli": "^5.1.1",
+    "webpack-dev-server": "^4.15.0"
+  },
+  "dependencies": {
+    "core-js": "^3.30.2"
+  }
+}
