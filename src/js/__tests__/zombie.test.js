@@ -2,9 +2,9 @@
 import Zombie from '../Zombie';
 
 test('should return normal char', () => {
-  const char = new Zombie('Shaun');
+  const char = new Zombie('Kyrts');
   const result = {
-    name: 'Shaun',
+    name: 'Kyrts',
     type: 'Zombie',
     attack: 40,
     defence: 10,
@@ -17,22 +17,22 @@ test('should return normal char', () => {
 test('testing for invalid name', () => {
   const error = 'Допускаются только имена длиной от 2 символов и не более 10';
   expect(() => {
-    const char = new Zombie('ы');
+    const char = new Zombie('J');
   }).toThrow(error);
 });
 
 test('testing for invalid type', () => {
   const error = 'Тип класса должен быть строкой';
   expect(() => {
-    const char = new Zombie('Шон', 13);
+    const char = new Zombie('Krt', 13);
   }).toThrow(error);
 });
 
 test('should execute lvlUp fn', () => {
-  const char = new Zombie('Shaun');
+  const char = new Zombie('Kyrts');
   char.levelUp();
   const result = {
-    name: 'Shaun',
+    name: 'Kyrts',
     type: 'Zombie',
     attack: 48,
     defence: 12,
@@ -44,7 +44,7 @@ test('should execute lvlUp fn', () => {
 
 test('testing invalid levelUp for dead char', () => {
   const error = 'нельзя повысить левел умершего';
-  const char = new Zombie('Shaun');
+  const char = new Zombie('Kyrts');
   char.health = 0;
   expect(() => {
     char.levelUp();
@@ -66,7 +66,7 @@ test.each([
   ({
     health, points, defence, expected,
   }) => {
-    const char = new Zombie('Shaun');
+    const char = new Zombie('Kyrts');
     char.health = health;
     char.defence = defence;
     char.damage(points);

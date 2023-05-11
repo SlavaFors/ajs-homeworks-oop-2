@@ -2,9 +2,9 @@
 import Bowman from '../Bowman';
 
 test('should return normal char', () => {
-  const char = new Bowman('Legolas');
+  const char = new Bowman('Teliomir');
   const result = {
-    name: 'Legolas',
+    name: 'Teliomir',
     type: 'Bowman',
     attack: 25,
     defence: 25,
@@ -17,7 +17,7 @@ test('should return normal char', () => {
 test('testing for invalid name', () => {
   const error = 'Допускаются только имена длиной от 2 символов и не более 10';
   expect(() => {
-    const char = new Bowman('ы');
+    const char = new Bowman('J');
   }).toThrow(error);
 });
 
@@ -29,10 +29,10 @@ test('testing for invalid type', () => {
 });
 
 test('should execute lvlUp fn', () => {
-  const char = new Bowman('Legolas');
+  const char = new Bowman('Teliomir');
   char.levelUp();
   const result = {
-    name: 'Legolas',
+    name: 'Teliomir',
     type: 'Bowman',
     attack: 30,
     defence: 30,
@@ -44,7 +44,7 @@ test('should execute lvlUp fn', () => {
 
 test('testing invalid levelUp for dead char', () => {
   const error = 'нельзя повысить левел умершего';
-  const char = new Bowman('Legolas');
+  const char = new Bowman('Teliomir');
   char.health = 0;
   expect(() => {
     char.levelUp();
@@ -66,7 +66,7 @@ test.each([
   ({
     health, points, defence, expected,
   }) => {
-    const char = new Bowman('Legolas');
+    const char = new Bowman('Teliomir');
     char.health = health;
     char.defence = defence;
     char.damage(points);

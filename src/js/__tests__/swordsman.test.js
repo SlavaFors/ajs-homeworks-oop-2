@@ -2,9 +2,9 @@
 import Swordsman from '../Swordsman';
 
 test('should return normal char', () => {
-  const char = new Swordsman('Arthur');
+  const char = new Swordsman('Rojeti');
   const result = {
-    name: 'Arthur',
+    name: 'Rojeti',
     type: 'Swordsman',
     attack: 40,
     defence: 10,
@@ -17,14 +17,14 @@ test('should return normal char', () => {
 test('testing for invalid name', () => {
   const error = 'Допускаются только имена длиной от 2 символов и не более 10';
   expect(() => {
-    const char = new Swordsman('ы');
+    const char = new Swordsman('J');
   }).toThrow(error);
 });
 
 test('testing for invalid type', () => {
   const error = 'Тип класса должен быть строкой';
   expect(() => {
-    const char = new Swordsman('Артур', 13);
+    const char = new Swordsman('Aerin', 13);
   }).toThrow(error);
 });
 

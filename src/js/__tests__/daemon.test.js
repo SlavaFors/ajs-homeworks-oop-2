@@ -17,14 +17,14 @@ test('should return normal char', () => {
 test('testing for invalid name', () => {
   const error = 'Допускаются только имена длиной от 2 символов и не более 10';
   expect(() => {
-    const char = new Daemon('ы');
+    const char = new Daemon('J');
   }).toThrow(error);
 });
 
 test('testing for invalid type', () => {
   const error = 'Тип класса должен быть строкой';
   expect(() => {
-    const char = new Daemon('Демонище', 13);
+    const char = new Daemon('Konstati', 13);
   }).toThrow(error);
 });
 
